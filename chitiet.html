@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/reposive.css">
+    <title>Document</title>
+</head>
+<body class="fone-mobile-teblet">
+    <header >
+        <img src="img/bander sua.png" alt="">
+    </header>
+    <!-- -----top---- -->
+    <section>
+        <nav>
+            <div class="container " id="myHeader">
+              <ul>
+                  <li><a href=""><img style="width: 120px;" src="img/logo.webp" alt=""></a></li>
+                  <li id="add-form" class="hiden-on-mobile-teblet">
+                     <a href="https://www.google.com/maps/search/yody/@21.081207,105.452835,10z/data=!3m1!4b1?hl=vi-VN">
+                     <i class="fa-solid fa-location-dot"></i>&nbspTìm kiếm cửa hàng</a>
+                  </li>       
+                  <li class="hiden-on-mobile-teblet">
+                     <i class="fa-solid fa-phone"></i><a style="color: orange;" href="">  0333 9999</a>
+                  </li>
+                  <li class="search"><input style="border-radius: 4px ;height: 25px;" type="text" placeholder="Tìm sản phẩm...">
+                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                  </li>
+                  <li class="hiden-on-mobile-teblet" id="add-form-log-in"><a href="#">Đăng nhập</a></li>
+                  <li class="hiden-on-mobile-teblet" id="add-form-register"><a href="#">Đăng kí</a></li>
+                 
+                   <!----------------add form đăng nhập---------- -->
+                   <div class="add-form-log-in">
+                      <div class="add-form-conten-log-in">
+                          <h2>Đăng nhập <span id="add-close-log-in"><i class="fa-solid fa-xmark"></i></span></h2>
+                          <form class="form-log-in" >
+                                <input type="text" placeholder="Nhập tài khoản"> <br>
+                                <input type="password" placeholder="Nhập mật khẩu">
+                              <button>Đăng nhập</button>
+                              <button>Quên mật khẩu</button>
+                          </form>
+                      </div>
+                   </div>
+                   <!---------add from đăng kí--------- -->
+                   <div class="add-form-register">
+                      <div class="add-form-conten-register">
+                          <h2>Đăng kí tài khoản <span id="add-close-register"><i class="fa-solid fa-xmark"></i></span></h2>
+                          <form class="form-register">
+                                <input type="text" placeholder="Nhập số điện thoại"> <br>
+                                <input type="password" placeholder="Nhập mật khẩu"> <br>
+                                <input type="password" placeholder="Nhạp lại mật khẩu">
+                              <button>Xác nhận</button>
+                          </form>
+                      </div>
+                   </div>
+              </ul>
+              <!-- -----------  menu top mobile--------- -->
+              <ul class="sort-bar-tablet">
+                    <li><a class="sort-bar-item-link" href="">NAM</a></li>
+                    <li><a class="sort-bar-item-link"  href="">NỮ</a></li>
+                    <li><a class="sort-bar-item-link"  href="">TRẺ EM</a></li>
+              </ul>
+              <ul class="sort-bar-tablet">
+                <li class="sort-bar-color"><a class="sort-bar-item-link" href="">SALE 50%</a></li>
+                <li><a class="sort-bar-item-link"  href="">BỘ SƯU TẬP</a></li>
+                <li><a class="sort-bar-item-link"  href="">POLO</a></li>
+             </ul>
+             <!---------------menu top-------- -->
+              <ul class="hiden-on-mobile-teblet ">
+                  <li class="tab action"  onclick="changeProductList('hot',this)">Sản phẩm hot</li>
+                  <li class="tab"  onclick="changeProductList('sale50', this)">Sale 50%</li>
+                  <li class="tab"  onclick="changeProductList('men',this)">Nam
+                     <div class="menu-nam">
+                        <ul>
+                          <li><a href="">Áo polo</a></li>
+                          <li><a href="">Áo sơmi</a></li>
+                          <li><a href="">Quần âu </a></li>
+                          <li><a href="">Quần shost</a></li>
+                          <li><a href="">Quần trong</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="tab" onclick="changeProductList('girl',this)">Nữ
+                      <div class="menu-nam">
+                      <ul>
+                        <li><a href="">Áo sơ mi</a></li>
+                        <li><a href="">Chân váy</a></li>
+                        <li><a href="">Quần âu</a></li>
+                        <li><a href="">Đầm</a></li>
+                        <li><a href="">Áo hai dây</a></li>
+                      </ul>
+                   </div>
+                  </li>
+                  <li class="hiden-on-mobile-teblet tab"  onclick="changeProductList('baby', this)">Trẻ em
+                       <div class="menu-nam">
+                      <ul>
+                        <li><a href="">Áo polo</a></li>
+                        <li><a href="">Quần</a></li>
+                        <li><a href="">Tất</a></li>
+                        <li><a href="">Balo</a></li>
+                      </ul>
+                   </div> 
+                  </li>
+                  <!------gio hang------------ -->
+                  <li>
+                    <div class="header__cart">
+                        <div class="header__cart-warp">
+          
+                          <i class="header__cart-icon fas fa-shopping-cart"></i>
+                          <span style="vertical-align: text-bottom;">Giỏ hàng</span>
+                          <span class="header__cart-notice">3</span>
+          
+                          <!-- Has No Cart: header__cart-list--no-cart -->
+                          <div class="header__cart-list ">
+                            <img src="./assets/img/no_cart.png" alt="" class="header__cart-no-cart-img">
+                            <span class="header__cart-list-no-cart-msg">
+                              Chưa có sản phẩm
+                            </span>
+          
+                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                            <ul class="header__cart-list-item">
+                           <!-- cart item -->
+                              <li class="header__cart-item">
+                                <img src="img/anh sale-3.jpg" alt="" class="header__cart-img">
+                                <div class="header__cart-item-info">
+          
+                                  <div class="header__cart-item-head">
+                                    <h5 class="header__cart-item-name">Váy popular logo </h5>
+                                    <div class="header__cart-item-prive-wrap">
+                                      <span class="header__cart-item-price">360.000đ</span>
+                                      <span class="header__cart-item-multiply">x</span>
+                                      <span class="header__cart-item-quantity">2</span>
+                                    </div>
+                                  </div>
+          
+                                  <div class="header__cart-item-body">
+                                    <span class="header__cart-item-description">
+                                      Phân loại hàng: Trắng, Đen
+                                    </span>
+                                    <span class="header__cart-item-remove">
+                                      Xóa
+                                    </span>
+                                  </div>
+          
+                                </div>
+                              </li>
+          
+                              <li class="header__cart-item">
+                                <img src="img/anh sp 10.webp" alt="" class="header__cart-img">
+                                <div class="header__cart-item-info">
+          
+                                  <div class="header__cart-item-head">
+                                    <h5 class="header__cart-item-name">Quần Tee Ver 2.0</h5>
+                                    <div class="header__cart-item-prive-wrap">
+                                      <span class="header__cart-item-price">180.000đ</span>
+                                      <span class="header__cart-item-multiply">x</span>
+                                      <span class="header__cart-item-quantity">2</span>
+                                    </div>
+                                  </div>
+          
+                                  <div class="header__cart-item-body">
+                                    <span class="header__cart-item-description">
+                                      Phân loại hàng: Đen
+                                    </span>
+                                    <span class="header__cart-item-remove">
+                                Xóa
+                                    </span>
+                                  </div>
+          
+                                </div>
+                              </li>
+          
+                              <li class="header__cart-item">
+                                <img src="img/anh sale-1.webp" alt="" class="header__cart-img">
+                                <div class="header__cart-item-info">
+          
+                                  <div class="header__cart-item-head">
+                                    <h5 class="header__cart-item-name">Áo polo mắt chim</h5>
+                                    <div class="header__cart-item-prive-wrap">
+                                      <span class="header__cart-item-price">165.000đ</span>
+                                      <span class="header__cart-item-multiply">x</span>
+                                      <span class="header__cart-item-quantity">2</span>
+                                    </div>
+                                  </div>        
+                                  <div class="header__cart-item-body">
+                                    <span class="header__cart-item-description">
+                                      Phân loại hàng: Trắng, Đen
+                                    </span>
+                                    <span class="header__cart-item-remove">
+                                      Xóa
+                                    </span>
+                                  </div>         
+                                </div>
+                              </li>         
+                            </ul>              
+                            <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>         
+                          </div>
+                        </div>
+                      </div>
+                 </li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+    <!-------------chi tiet san pham--------- -->
+    <section>
+        <div class="container">
+            <div class="product-details">
+                <div id="frame" class="product-details-left">
+                      <img src="img/chitiet1.webp" alt="">
+                </div>
+                <div class="product-details-center">
+                       <img src="img/anh con 1.webp" onclick="zooMount(this)" alt="">
+                       <img src="img/anh con 2.webp" onclick="zooMount(this)" alt="">
+                       <img src="img/anh con 3.webp" onclick="zooMount(this)" alt="">
+                       <img src="img/anh con 4.webp" onclick="zooMount(this)" alt="">
+                </div>
+                <div class="product-details-right">
+                     <div class="product-dsetails-right-one">
+                        <h2>Áo Hai Dây Ôm Sát Dáng Lửng Thấm Hút Mồ Hôi</h2>
+                        <p>Mã: BLN5004-DEN</p>
+                   
+                     </div>
+                     <hr>
+                     <div class="product-dsetails-right-two">
+                        <p>Màu sắc: Đen</p>
+                        <img src="img/anh con 1.webp" alt="">
+                        <img src="img/aotrang1.jpg" alt="">
+                        <img src="img/aohong1.jpg" alt="">      
+                        <img src="img/aohong1.jpg" alt=""> 
+                           <div class="product-dsetails-right-two-rule-size">
+                              <p>Kích thước: M </p>
+                              <p><i class="fa-solid fa-ruler-combined"></i>Gợi ý tìm size </p>
+                              <a href="">Bảng size chuẩn</a>
+                            </div>
+                        <p><span>S</span> <span>M</span> <span>L</span> <span>XL</span></p>  
+                        <p>Chọn số lượng</p>
+                        <p><span>+</span> <span>1</span> <span>-</span></p> 
+                            <div class="product-dsetails-right-two-marker">
+                                <a href=""><p> Mua ngay </p></a>
+                                <p> <a href=""> Thêm vào giỏ hàng</a></p>
+                            </div> 
+                        <p class="goi-dien"><a href=""><i class="fa-solid fa-phone"></i> Gọi điện đặt Mua</a>
+                            <a href=""><i class="fa-solid fa-location-dot"></i>Tìm shop gần bạn nhất</a>
+                        </p>         
+                     </div>
+                     <hr>   
+                     <div class="product-dsetails-right-three">
+                        <ul>
+                             <h3>Đặc điểm sản phẩm:</h3>
+                             <li><i class="fa-solid fa-square-check"></i>Chất liệu: 95% cotton + 5% spandex</li>
+                             <li><i class="fa-solid fa-square-check"></i>Thấm hút mồ hôi tốt</li>
+                             <li><i class="fa-solid fa-square-check"></i>Co giãn và đàn hồi tối đa</li>
+                             <li><i class="fa-solid fa-square-check"></i>Có thể kết hợp được với nhiều phong cách khách nhau mà</li>
+                             <li> &nbsp &nbsp &nbsp  vẫn hợp thời trang và chẳng hề lỗi mốt</li>
+                             <li><i class="fa-solid fa-square-check"></i>Phù hợp mặc bên trong, thoải mái trong từng cử động</li>
+                             <li><i class="fa-solid fa-square-check"></i>KALY - Look good. Feel good.</li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ------san pham them-------- -->
+    <section class="slider-product-one">
+        <div class="container">
+             <div class="slider-product-one-content-chitiet">
+                <div class="slider-product-one-all">
+                     <div class="slider-product-two-of-one ">
+                            <div class="slider-product-one-content-items">
+                             <a href="http://127.0.0.1:5500/chitiet2.html"><div class="slider-product-one-content-item">
+                                 <img src="img/anh sale-1.webp" alt="">
+                                  <div class="slider-product-one-content-item-text">
+                                      <li><img src="img/icon sale.png" alt=""><p>Sale sấp mặt</p></li>
+                                      <li>Áo polo dáng mắt chim ưng</li>
+                                      <li>1.180.000 <sup>đ</sup></li>
+                                      <li>1.065.000 <sup>đ</sup></li>
+                                      <li>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                      </li>
+                                      <li><a href=""><i class="fa-solid fa-cart-plus"></i></a></li>
+                                  </div>
+                               </div></a>
+                               <a href=""><div class="slider-product-one-content-item">
+                                 <img src="img/anh sale-5.webp" alt="">
+                                  <div class="slider-product-one-content-item-text">
+                                      <li><img src="img/icon sale.png" alt=""><p>Sale sấp mặt</p></li>
+                                      <li>Váy công sở thời trang cá tính</li>
+                                      <li>1.380.000 <sup>đ</sup></li>
+                                      <li>1.265.000 <sup>đ</sup></li>
+                                      <li>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i> 
+                                      </li>
+                                      <li><a href=""><i class="fa-solid fa-cart-plus"></i></a></li>
+                                  </div>
+                               </div></a>
+                               <a href=""><div class="slider-product-one-content-item">
+                                 <img src="img/anh sale-3.jpg" alt="">
+                                  <div class="slider-product-one-content-item-text">
+                                      <li><img src="img/icon sale.png" alt=""><p>Sale sấp mặt</p></li>
+                                      <li>Váy hoa phong cách bánh bèo</li>
+                                      <li>1.380.000 <sup>đ</sup></li>
+                                      <li>1.265.000 <sup>đ</sup></li>
+                                      <li>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i> 
+                                      </li>
+                                      <li><a href=""><i class="fa-solid fa-cart-plus"></i></a></li>
+                                  </div>
+                               </div></a>
+                               <a href=""><div class="slider-product-one-content-item">
+                                 <img src="img/anh sale-4.webp" alt="">
+                                  <div class="slider-product-one-content-item-text">
+                                      <li><img src="img/icon sale.png" alt=""><p>Sale sấp mặt</p></li>
+                                      <li>Váy hoa nhí cho bạn nữ điệu đà</li>
+                                      <li>1.180.000 <sup>đ</sup></li>
+                                      <li>1.065.000 <sup>đ</sup></li>
+                                      <li>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i> 
+                                      </li>
+                                      <li><a href=""><i class="fa-solid fa-cart-plus"></i></a></li>
+                                  </div>
+                               </div></a>
+                                 <a href=""><div class="slider-product-one-content-item">
+                                  <img src="img/anh sale-6.webp" alt="">
+                                  <div class="slider-product-one-content-item-text">
+                                      <li><img src="img/icon sale.png" alt=""><p>Sale sấp mặt</p></li>
+                                      <li>Bộ đồ thể thao siêu co dãn</li>
+                                      <li>1.090.000 <sup>đ</sup></li>
+                                      <li>999.000 <sup>đ</sup></li>
+                                      <li>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i> 
+                                      </li>
+                                      <li><a href=""><i class="fa-solid fa-cart-plus"></i></a></li>
+                                  </div>
+                               </div></a>
+                            </div>
+                                                
+                       </div>
+                     </div>                  
+                    <!-- <div class="slider-product-one-btn">
+                        <i class="fas fa-chevron-left"></i>
+                         <i class="fas fa-chevron-right"></i>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+   </section>
+    <!-----------footer----------------->
+    <section>
+        <div class="container">
+           <div class="footer">
+               <div class="footer-conten">
+                   <div class="footer-one">
+                       <li>“Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ hành động của mình”
+                             là sứ mệnh, là triết lý, chiến lược.. luôn cùng YODY tiến bước”</li>
+                       <li>ĐĂNG KÝ NHẬN THÔNG TIN</li>
+                       <li><input type="text" placeholder="Nhập email đăng kí của bạn"><input type="submit"></li>
+                  </div>
+                  <div class="footer-two">
+                       <li><h3>VỀ YODY</h3></li>
+                       <a href=""><li>Giới thiệu</li></a>
+                       <a href=""><li>Liên hệ</li></a>
+                       <a href=""><li>Tuyển dụng</li></a>
+                       <a href=""><li>Tin tức</li></a>
+                       <a href=""><li>Hệ thống cửa hàng</li></a>
+                  </div>
+                  <div class="footer-three">
+                        <li><h3>HỖ TRỢ KHÁCH HÀNG</h3></li>
+                        <a href=""><li>Hướng dẫn chọn size</li></a>
+                        <a href=""><li>Chính sách khách hàng <br> thân thiết</li></a>
+                        <a href=""><li>Chính sách đổi/trả</li></a>
+                        <a href=""><li>Chính sách bảo mật</li></a>
+                        <a href=""><li>Thanh toán, giao nhận</li></a>
+                        <a href=""><li>Chính sách Đồng phục</li></a>
+                  </div>
+                  <div class="footer-four">
+                          <li>
+                                <img src="img/map.svg" alt="">
+                                       <p>Công ty cổ phần Thời trang YODY
+                                           Mã số thuế: 0801206940
+                                           Địa chỉ: Đường An Định - Phường Việt Hoa - Thành phố Hải Dương - Hải Dương</p>
+                          </li>
+                          <li>
+                               <img src="img/icon_address.webp" alt="">
+                               <a href="">Tìm kiếm cửa hàng gần bạn nhất</a>
+                          </li>
+                  </div>
+               </div>
+           </div>
+        </div>
+   </section>
+      <script src="javascript .js"></script>
+</body>
+</html>
