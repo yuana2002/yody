@@ -1,0 +1,19 @@
+{
+  "name": "yody",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuana2002/yody.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuana2002/yody/issues"
+  },
+  "homepage": "https://github.com/yuana2002/yody#readme"
+}
