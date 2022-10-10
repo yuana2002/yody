@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hunghh19/Yody-v2.1.0"
+    "url": "git+https://github.com/yuana2002/yody"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hunghh19/Yody-v2.1.0/issues"
+    "url": "https://github.com/yuana2002/yody/issues"
   },
-  "homepage": "https://github.com/Hunghh19/Yody-v2.1.0#readme",
+  "homepage": "https://github.com/yuana2002/yody#readme",
   "dependencies": {
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
