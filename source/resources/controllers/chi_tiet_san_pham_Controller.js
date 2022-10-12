@@ -22,13 +22,15 @@ class chi_tiet_san_pham_Controller{
         res.render('chi_tiet_san_pham/add');
     }
 
-    // [POST] /chi_tiet_san_pham/upload
-    upload(req, res, next){
+    // [POST] /chi_tiet_san_pham/store
+    store(req, res, next){
         const sanpham = new sanphams(req.body);
         sanpham.save()
-        
+            .then(() => res.redirect ('/'))
+            .catch(error => {
+                ('Error')
+            })
     }
-
 }
 
 

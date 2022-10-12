@@ -14,6 +14,11 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname,'more')))
 
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(express.json());
+
 app.engine('hbs', handlebars.engine({
   extname: '.hbs'
 }));

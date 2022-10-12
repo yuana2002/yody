@@ -1,38 +1,39 @@
 <div class="mt-4">
     <h3>ĐĂNG SẢN PHẨM</h3>
 
-    <form method="POST" action="/chi_tiet_san_pham/upload">
+    <form method="POST" action="../chi_tiet_san_pham/store">
         <div class="form-group">
-            <label for="Name">Tên sản phẩm</label>
-            <input type="text" name="Name" class="form-control" id="Name" placeholder="Nhập tên sản phẩm">
+            <label for="Name_Input">Tên sản phẩm</label>
+            <input type="text" name="Name" class="form-control" id="Nm" placeholder="Nhập tên sản phẩm">
         </div>
         <div class="form-group">
-            <label for="Price">Giá sản phẩm</label>
-            <input type="number" name="Price" class="form-control" id="Price" placeholder="Nhập giá sản phẩm">
+            <label for="Price_Input">Giá sản phẩm</label>
+            <input type="number" name="Price" class="form-control" id="Prc" placeholder="Nhập giá sản phẩm">
         </div>
         {{!-- <div class="form-group">
             <label for="Distribute">Loại sản phẩm</label>
             <select class="form-control" id="Distribute">
-            <option value="Ao" id="Ao">Áo</option>
-            <option value="Quan" id="Quan">Quần</option>
-            <option value="BoTheThao" id="BoTheThao">Bộ Thể Thao</option>
-            <option value="PhuKien" id="PhuKien">Phụ Kiện</option>
+                <option value="Ao">Áo</option>
+                <option value="Quan">Quần</option>
+                <option value="BoTheThao">Bộ Thể Thao</option>
+                <option value="PhuKien">Phụ Kiện</option>
             </select>
-        </div>
-        <div class="form-group">
+        </div> --}}
+        {{!-- <div class="form-group">
             <label for="Gender">Giới tính sản phẩm</label>
             <select class="form-control" id="Gender">
-            <option id="Nam">Nam</option>
-            <option id="Nu">Nữ</option>
-            <option id="TreEm">Trẻ em</option>
-            <option id="Unisex">Unisex</option>
+                <option id="Nam">Nam</option>
+                <option id="Nu">Nữ</option>
+                <option id="TreEm">Trẻ em</option>
+                <option id="Unisex">Unisex</option>
             </select>
         </div> --}}
         
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Giới thiệu sản phẩm</label>
-            <textarea class="form-control" name="Description" id="Description" rows="3" placeholder="Nhập giới thiệu sản phẩm"></textarea>
+            <label for="Des_Input">Giới thiệu sản phẩm</label>
+            <textarea class="form-control" name="Description" id="des" rows="3" placeholder="Nhập giới thiệu sản phẩm"></textarea>
         </div>
+
         <button type="submit" class="btn btn-primary">Đăng sản phẩm</button>
     </form>
 </div>

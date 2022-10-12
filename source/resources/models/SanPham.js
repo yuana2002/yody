@@ -11,7 +11,7 @@ const sanphams = new Schema({
     Price:{type: Number, require: true,},
     // Distribute:{type: String,},
     // Gender:{type: String,},
-    Description:{type: String, require: true,},
+    Description:{type: String, maxLength: 255, require: true,},
     // image:{type: String},
     slug:{type: String, slug:'Name', unique: true},
 
