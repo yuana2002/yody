@@ -1,0 +1,39 @@
+<div class="mt-4">
+    <h3>SỬA SẢN PHẨM</h3>
+
+    <form class="mt-4" method="POST" action="/chi_tiet_san_pham/{{sanpham._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="Name_Input">Tên sản phẩm</label>
+            <input type="text" name="Name" class="form-control" value="{{sanpham.Name}}" id="Nm" placeholder="Nhập tên sản phẩm">
+        </div>
+        <div class="form-group">
+            <label for="Price_Input">Giá sản phẩm</label>
+            <input type="number" name="Price" class="form-control" value="{{sanpham.Price}}" id="Prc" placeholder="Nhập giá sản phẩm">
+        </div>
+        {{!-- <div class="form-group">
+            <label for="Distribute">Loại sản phẩm</label>
+            <select class="form-control"id="Distribute">
+                <option value="Ao">Áo</option>
+                <option value="Quan">Quần</option>
+                <option value="BoTheThao">Bộ Thể Thao</option>
+                <option value="PhuKien">Phụ Kiện</option>
+            </select>
+        </div> --}}
+        {{!-- <div class="form-group">
+            <label for="Gender">Giới tính sản phẩm</label>
+            <select class="form-control"id="Gender">
+                <option value="" id="Nam">Nam</option>
+                <option value="" id="Nu">Nữ</option>
+                <option value="" id="TreEm">Trẻ em</option>
+                <option value="" id="Unisex">Unisex</option>
+            </select>
+        </div> --}}
+        
+        <div class="form-group">
+            <label for="Des_Input">Giới thiệu sản phẩm</label>
+            <textarea class="form-control" name="Description" id="des" rows="3" placeholder="Nhập giới thiệu sản phẩm">{{sanpham.Description}}</textarea>
+        </div>
+
+        <button type="submit" class="mt-4 btn btn-primary">Sửa sản phẩm</button>
+    </form>
+</div>

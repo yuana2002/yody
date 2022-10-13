@@ -31,6 +31,21 @@ class chi_tiet_san_pham_Controller{
                 ('Error')
             })
     }
+
+    // [GET] /chi_tiet_san_pham/edit
+    edit(req, res, next){
+        sanphams.findById(req.params.id)
+            .then(sanpham => res.render('chi_tiet_san_pham/edit',{
+                sanpham: mongooseToObject(sanpham)
+            }))
+            .catch(next)
+    }  
+    
+    update(req,res, next){
+        sanphams.updateOne({_id: req.params.id}, req.body)
+            .then(() => res.redirect('/me/store/list'))
+            .catch(next)
+    }
 }
 
 
