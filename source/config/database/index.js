@@ -8,7 +8,7 @@ async function connect(){
         });
         console.log('DataBase_Successfully')
     } catch (error) {
-        console.log('DataBase_StopWorking' + error)
+        console.log('DataBase_StopWorking' + ' ' + (error))
     }
 }
 
