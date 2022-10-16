@@ -9,10 +9,10 @@ const sanphams = new Schema({
     
     Name:{type: String, require: true,},
     Price:{type: Number, require: true,},
-    // Distribute:{type: String,},
-    // Gender:{type: String,},
+    Distribute:{type: String,},
+    Gender:{type: String,},
     Description:{type: String, maxLength: 255, require: true,},
-    // image:{type: String},
+    image:{type: String},
     slug:{type: String, slug:'Name', unique: true},
 
 }, {timestamps: true})

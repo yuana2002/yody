@@ -31,7 +31,7 @@
 
 <div>
     {{!-- Delete --}}
-    <!-- Modal -->
+        <!-- Modal -->
     <div class="modal fade" id="delete_product" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -40,15 +40,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                
-                
                     <p>
                         Bạn có chắc chắn xóa sản phẩm {{this.Name}} !!!
                     </p>
-                
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger">Xóa bỏ</button>
+                <button id="btn_delete_product" type="button" class="btn btn-danger">Xóa bỏ</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
             </div>
@@ -56,21 +53,30 @@
     </div>
 </div>
 
+{{!--  --}}
 
+<form name="Delete_Form" method="POST"></form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 
     document.addEventListener('DOMContentLoaded', function(){
-       //$('delete_product').on('show.bs.modal', function(event){
-       //    var button = $(event.relatedTarget)
-       //     var id = button.data('id')
-       //     console.log(id)
-       //})
+        var productId
+        var delete_form = document.forms['Delete_Form']
+        var btn_delete_product = document.getElementById('btn_delete_product')
 
-        const delete_product = document.getElementById('delete_product')
-        delete_product.addEventListener('show.bs.modal', event => {
-        const button = event.relatedTarget
-        const id = button.data('id')
-        console.log(id)})
+        $('#delete_product').on('show.bs.modal', function(event){
+           var button = $(event.relatedTarget)
+           productId = button.data('id')
+       }) 
+
+
+        btn_delete_product.onclick = function (){
+            delete_form.action = '/chi_tiet_san_pham/' + productId +'?_method=DELETE'
+            delete_form.submit()
+        }
     })
+
 
 </script>
