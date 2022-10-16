@@ -4,7 +4,8 @@ async function connect(){
         await mongoose.connect('mongodb+srv://Hung:HuyHung90@sanphams.wvumejc.mongodb.net/?retryWrites=true&w=majority', {
                 // await mongoose.connect('mongodb+srv://Hung:HuyHung90@sanphams.wvumejc.mongodb.net/?retryWrites=true&w=majority', {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            // useCreateIndex: true,
         });
         console.log('DataBase_Successfully')
     } catch (error) {

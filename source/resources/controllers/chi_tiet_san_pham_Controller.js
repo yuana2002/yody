@@ -46,6 +46,12 @@ class chi_tiet_san_pham_Controller{
             .then(() => res.redirect('/me/store/list'))
             .catch(next)
     }
+    
+    delete(req,res, next){
+        sanphams.deleteOne({_id: req.params.id})
+            .then(() => res.redirect('back'))
+            .catch(next)
+    }
 }
 
 
