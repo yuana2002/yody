@@ -1,18 +1,46 @@
 <div class="mt-4">
     <div class="row">
+        <div>
+            <img style="width:100%;" src="https://bizweb.sapocdn.net/100/438/408/themes/878697/assets/slider_1.jpg?1665829959870" alt="">
+        </div>
+        <div class="endow mt-4">
+            <div class="endow1-col-3">
+                <img src="img/uudai1.webp" alt="">
+                 <p>  Miễn phí vận chuyển đơn 0đ <br>
+                      FREESHIP mọi đơn hàng
+                 </p>
+            </div>
+            <div class="endow2-col-3">
+               <img src="img/uudai2.webp" alt="">
+                <p>Thanh toán COD <br>
+                   Thanh toán khi nhận hàng (COD)
+                </p>
+            </div>
+            <div class="endow3-col-3">
+                <img src="img/uudai3.webp" alt="">
+                <p>Khách hàng VIP <br>
+                   Ưu đãi dành cho khách hàng VIP
+                </p>
+            </div>
+            <div class="endow4-col-3">
+               <img src="img/uudai4.webp" alt="">
+               <p>Hỗ trợ bảo hành <br>
+                  Dễ dàng đổi, sửa sản phẩm tại YODY Store
+               </p>
+            </div>
+        </div>
         {{#each SanPham}}
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-4 col-lg-3 col-6 mt-3">
                 <div class="card">
                     <a href="/chi_tiet_san_pham/{{this.slug}}">
                         <img src="/img/{{this.image}}" alt="" class="card-img-top">
                     </a>
                     <div class="card-body">
-                        <a href="/chi_tiet_san_pham/{{this.slug}}">
-                            <h5 class="card-list">{{this.Name}}</h5>
-                        </a>
-                        
+                        <a href="/chi_tiet_san_pham/{{this.slug}}" style="text-decoration:none;">
+                            <h6 class="card-list text-black">{{this.Name}}</h6>
+                        </a>                     
                         <p class="card-text">{{this.Price}}</p>
-                        <a href="" class="btn btn-primary">Mua</a>
+                        <a href="" class="btn btn-warning" style="margin-left: 120px">Mua</a>
                     </div>
                 </div>
             </div>

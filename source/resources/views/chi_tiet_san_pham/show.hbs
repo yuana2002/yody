@@ -1,12 +1,108 @@
-<div class="mt-4">
-    <div class="row">
-        <div class="col-lg-3">
 
-        </div>
+ <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <div class="container mt-4">
+            <div class="card-cad">
+                <div class="container-fliud">
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+                                <div class="preview-pic tab-content">
+                                    <div class="tab-pane" id="pic-1">
+                                        <img src="../assets/img/product/samsung-galaxy-tab-10.jpg">
+                                    </div>
+                                    <div class="tab-pane" id="pic-2">
+                                        <img src="../assets/img/product/samsung-galaxy-tab.jpg">
+                                    </div>
+                                    <div class="tab-pane active" id="pic-3">
+                                        <img src="../assets/img/product/samsung-galaxy-tab-4.jpg">
+                                    </div>
+                                </div>
+                                <ul class="preview-thumbnail nav nav-tabs">
+                                    <li class="active">
+                                        <a data-target="#pic-1" data-toggle="tab" class="">
+                                            <img src="../assets/img/product/samsung-galaxy-tab-10.jpg">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-target="#pic-2" data-toggle="tab" class="">
+                                            <img src="../assets/img/product/samsung-galaxy-tab.jpg">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-target="#pic-3" data-toggle="tab" class="active">
+                                            <img src="../assets/img/product/samsung-galaxy-tab-4.jpg">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="details col-md-6">
+                                <h4 class="product-title">{{sanphams.Name}}</h4>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <span class="review-no">999 reviews</span>
+                                    <hr class="mb-0">
+                                </div>
+                                <p class="product-description">Mã:  SMM3011-XDA-M</p>
+                                <small class="text-muted">Giá cũ: <s><span>990.000 vnđ</span></s></small>
+                                <h5 class="price">Giá : <span>{{sanphams.Price}}</span></h5>
+                                <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo
+                                    <strong>Uy
+                                        tín</strong>!</p>
+                                <h6 class="sizes">sizes:
+                                    <span class="size" data-toggle="tooltip" title="cỡ Nhỏ">s</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Trung bình">m</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Lớn">l</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Đại">xl</span>
+                                </h6>
+                                <h6 class="colors">colors:
+                                    <span class="color orange not-available" data-toggle="tooltip"
+                                        title="Hết hàng"></span>
+                                    <span class="color green"></span>
+                                    <span class="color blue"></span>
+                                </h6>
+                                <div class="action">
+                                    <a class="add-to-cart btn btn-default" id="btnThemVaoGioHang">Mua ngay</a>
+                                    <a class="like btn btn-default" href="#">Thêm vào giỏ hàng</a>
+                                </div>
+                            </div>
 
-        <div class="col-lg-9">
-            <h2>{{sanphams.Name}}</h2>
-            <img src="/{{sanphams.image}}" alt="">
+                        </div>
+                </div>
+            </div>
+
+            <div class="card-cad">
+                <div class="container-fluid">
+                    <div class="wrapper row">
+                         <div class="preview col-md-6">
+                            <img src="https://bizweb.sapocdn.net/100/438/408/files/smm3011.jpg?v=1642504319446" alt="">
+                         </div>
+                      <div class="details col-md-6">
+                         <ul>
+                             <h4>Đặc điểm sản phẩm:</h4>
+                             <li>Chất liệu: 95% cotton + 5% spandex</li>
+                             <li>Thấm hút mồ hôi tốt</li>
+                             <li>Co giãn và đàn hồi tối đa</li>
+                             <li>Có thể kết hợp được với nhiều phong cách khách nhau mà</li>
+                             <li> vẫn hợp thời trang và chẳng hề lỗi mốt</li>
+                             <li>Phù hợp mặc bên trong, thoải mái trong từng cử động</li>
+                             <li>KALY - Look good. Feel good.</li>
+                        </ul>
+                     </div>
+                    </div>
+                     <div class="row">
+                        <div class="col">
+                           <img src="https://bizweb.sapocdn.net/100/438/408/files/1301-cafe-02.jpg?v=1642504349944" alt="">
+                           <h5 class="shop-app">Có thể bạn muốn mua:</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        <!-- End block content -->
+    </main>
