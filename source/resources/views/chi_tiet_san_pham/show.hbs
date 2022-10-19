@@ -1,5 +1,5 @@
 
- <main role="main">
+
         <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
         <div class="container mt-4">
             <div class="card-cad">
@@ -11,26 +11,26 @@
                                         <img src="/img/{{sanphams.image}}">
                                     </div>
                                     <div class="tab-pane" id="pic-2">
-                                        <img src="../assets/img/product/samsung-galaxy-tab.jpg">
+                                        <img src="/img/{{sanphams.image}}">
                                     </div>
                                     <div class="tab-pane active" id="pic-3">
-                                        <img src="../assets/img/product/samsung-galaxy-tab-4.jpg">
+                                        <img src="/img/{{sanphams.image}}">
                                     </div>
                                 </div>
                                 <ul class="preview-thumbnail nav nav-tabs">
                                     <li class="active">
                                         <a data-target="#pic-1" data-toggle="tab" class="">
-                                            <img src="../assets/img/product/samsung-galaxy-tab-10.jpg">
+                                            <img src="/img/{{sanphams.image}}">
                                         </a>
                                     </li>
                                     <li class="">
                                         <a data-target="#pic-2" data-toggle="tab" class="">
-                                            <img src="../assets/img/product/samsung-galaxy-tab.jpg">
+                                            <img src="">
                                         </a>
                                     </li>
                                     <li class="">
                                         <a data-target="#pic-3" data-toggle="tab" class="active">
-                                            <img src="../assets/img/product/samsung-galaxy-tab-4.jpg">
+                                            <img src="">
                                         </a>
                                     </li>
                                 </ul>
@@ -95,7 +95,7 @@
                         </ul>
                      </div>
                     </div>
-                     <div class="row">
+                    <div class="row">
                         <div class="col">
                            <img src="https://bizweb.sapocdn.net/100/438/408/files/1301-cafe-02.jpg?v=1642504349944" alt="">
                            <h5 class="shop-app">Có thể bạn muốn mua:</h5>
@@ -103,6 +103,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                {{#each SanPham}}
+                            <div class="col-sm-4 col-lg-3 col-6 mt-3">
+                                <div class="card">
+                                    <a href="/chi_tiet_san_pham/{{this.slug}}">
+                                        <img src="/img/{{this.image}}" alt="" class="card-img-top">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="/chi_tiet_san_pham/{{this.slug}}" style="text-decoration:none;">
+                                            <h6 class="card-list text-black">{{this.Name}}</h6>
+                                        </a>                     
+                                        <p class="card-text">{{this.Price}}.000 đ</p>
+                                        <a href="" class="btn btn-warning" style="margin-left: 120px">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                {{/each}}
+            </div>
         </div>
         <!-- End block content -->
-    </main>
