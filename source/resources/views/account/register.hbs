@@ -1,0 +1,87 @@
+      <div class="mt-4">
+        <form method="POST" action="/account/validation">
+          <h3 class="heading">Thành viên đăng ký</h3>
+          <p class="desc">Cùng mua sắm tại YODY ❤️</p>
+      
+          <div class="spacer"></div>
+      
+          <div class="form-group">
+            <label for="First_Name" class="form-label">Tên</label>
+            <input id="First_Name" name="First_Name" type="text" placeholder="Tên" class="form-control">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="Last_Name" class="form-label">Họ</label>
+            <input id="Last_Name" name="Last_Name" type="text" placeholder="Họ" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="Email" name="Email" type="text" placeholder="Địa chỉ Email" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="Password" class="form-label">Mật khẩu</label>
+            <input id="Password" name="Password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="Password_Confirmation" class="form-label">Nhập lại mật khẩu</label>
+            <input id="Password_Confirmation" name="Password_Confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="Gender" class="form-label">Giới tính</label>
+
+              <input type="radio" class="btn-check" name="Gender" id="Nam" autocomplete="off">
+              <label class="btn btn-secondary" name="Nam" for="Nam">Nam</label>
+
+              <input type="radio" class="btn-check" name="Gender" id="Nu" autocomplete="off">
+              <label class="btn btn-secondary" name="Nu" for="Nu">Nữ</label>
+
+              <input type="radio" class="btn-check" name="Gender" id="Khac" autocomplete="off">
+              <label class="btn btn-secondary" name="Khac" for="Khac">Khác</label>
+
+            <span class="form-message"></span>
+          </div>
+
+      
+          <button class="form-submit">Đăng ký</button>
+        </form>
+      
+    </div>
+    <script src="/source/resources/socorip/validator.js"></script>
+
+    <script>
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#First_Name', 'Vui lòng nhập tên đầy đủ của bạn'),
+          Validator.isRequired('#Last_Name', 'Vui lòng nhập tên đầy đủ của bạn'),
+          Validator.isEmail('#email'),
+          Validator.minLength('#password',6),
+          Validator.isRequired('#password_confirmation'),
+          Validator.isRequired('input[name="gender"]'),
+          Validator.isRequired('#provice'),
+          Validator.isConfirmed('#password_confirmation', function(){
+            return document.querySelector('#form-1 #password').value;
+          },'Mật khẩu nhập lại không chính xác')
+        ],
+        onSubmit: function (data){
+          const account = new Schema();
+          account.save()
+            .then(() => res.redirect ('/register'))
+            .catch(error => {
+                ('Error')
+            })
+          console.log(data)
+        }
+      })
+    </script>
