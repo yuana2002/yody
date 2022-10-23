@@ -13,13 +13,20 @@ class AccountController{
     }
 
     validation(req, res, next){
+        
         const account = new accounts(req.body);
         account.save()
-            .then(() => res.redirect ('account/register'))
+            .then(() => res.redirect ('/account/register'))
             .catch(error => {
                 ('Error')
             })
     }
+
+    login(req, res,next){
+        res.render('account/login');
+        
+    }
+
 }
 
 
